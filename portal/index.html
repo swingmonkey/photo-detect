@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claw 项目导航</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Claw</h1>
+            <p class="subtitle">项目导航</p>
+        </header>
+
+        <main class="projects-grid">
+            <!-- Photo Detect 项目卡片 -->
+            <a href="photo-detect/index.html" class="project-card">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                        <circle cx="12" cy="13" r="3"/>
+                    </svg>
+                </div>
+                <h3 class="project-title">Photo Detect</h3>
+                <p class="project-desc">提取照片 EXIF 信息，查看拍摄时间、地点、设备等信息</p>
+                <div class="project-tags">
+                    <span class="tag">照片</span>
+                    <span class="tag">EXIF</span>
+                    <span class="tag">位置</span>
+                </div>
+            </a>
+
+            <!-- Stock News 项目卡片 -->
+            <a href="news.html" class="project-card">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="M18 17V9"/>
+                        <path d="M13 17V5"/>
+                        <path d="M8 17v-3"/>
+                    </svg>
+                </div>
+                <h3 class="project-title">Stock News</h3>
+                <p class="project-desc">股票新闻聚合，实时追踪市场动态和财经资讯</p>
+                <div class="project-tags">
+                    <span class="tag">股票</span>
+                    <span class="tag">新闻</span>
+                    <span class="tag">财经</span>
+                </div>
+            </a>
+
+            <!-- Programming Language Rankings 项目卡片 -->
+            <a href="#" class="project-card" onclick="alert('视频需要使用 Remotion 预览器打开：\nnpx remotion preview'); return false;">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <path d="M8 13h8"/>
+                        <path d="M8 17h8"/>
+                        <path d="M8 9h2"/>
+                    </svg>
+                </div>
+                <h3 class="project-title">Programming Language Rankings</h3>
+                <p class="project-desc">2015-2025 年编程语言流行度变化视频（Remotion）</p>
+                <div class="project-tags">
+                    <span class="tag">视频</span>
+                    <span class="tag">数据可视化</span>
+                    <span class="tag">Remotion</span>
+                </div>
+            </a>
+
+            <!-- 待添加项目占位卡片 -->
+            <div class="project-card placeholder">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+                <h3 class="project-title">更多项目</h3>
+                <p class="project-desc">待添加新项目...</p>
+                <div class="project-tags">
+                    <span class="tag">敬请期待</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Claw. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
