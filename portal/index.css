@@ -2,6 +2,7 @@
 :root {
     --primary: #4A90E2;
     --primary-dark: #357ABD;
+    --primary-light: #E8F4FD;
     --bg: #F7F9FC;
     --card-bg: #FFFFFF;
     --text: #2C3E50;
@@ -41,117 +42,235 @@ body {
 .header {
     text-align: center;
     margin-bottom: 60px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: var(--border-radius);
+    color: white;
+    box-shadow: var(--shadow-hover);
 }
 
 .header h1 {
     font-size: 48px;
     font-weight: 800;
-    color: var(--primary);
     margin-bottom: 12px;
     letter-spacing: -1px;
 }
 
-.subtitle {
+.header .subtitle {
     font-size: 18px;
-    color: var(--text-secondary);
     font-weight: 400;
+    opacity: 0.9;
 }
 
-/* ─── 项目卡片网格 ─────────────────────────────────────────────────── */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+/* ─── 主内容区 ────────────────────────────────────────────────────── */
+.main-content {
     flex: 1;
 }
 
-/* ─── 项目卡片 ────────────────────────────────────────────────────── */
-.project-card {
+.main-content section {
+    margin-bottom: 60px;
+}
+
+.main-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ─── 功能特性 ────────────────────────────────────────────────────── */
+.features {
+    padding: 20px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.feature-card {
     background: var(--card-bg);
     border-radius: var(--border-radius);
     padding: 32px;
-    text-decoration: none;
-    color: inherit;
+    text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 2px solid transparent;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
 
-.project-card:hover {
+.feature-card:hover {
     box-shadow: var(--shadow-hover);
     border-color: var(--primary);
     transform: translateY(-4px);
 }
 
-.project-card.placeholder {
-    border: 2px dashed #E0E6ED;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: default;
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
 }
 
-.project-card.placeholder:hover {
-    border-color: var(--text-secondary);
-    transform: none;
-    box-shadow: var(--shadow);
-}
-
-/* ─── 项目图标 ────────────────────────────────────────────────────── */
-.project-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin-bottom: 8px;
-}
-
-.project-card.placeholder .project-icon {
-    background: linear-gradient(135deg, #E0E6ED 0%, #CBD5E0 100%);
-}
-
-/* ─── 项目标题 ────────────────────────────────────────────────────── */
-.project-title {
-    font-size: 24px;
-    font-weight: 700;
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
     color: var(--text);
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
-/* ─── 项目描述 ────────────────────────────────────────────────────── */
-.project-desc {
+.feature-card p {
     font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.6;
-    flex-grow: 1;
 }
 
-/* ─── 项目标签 ────────────────────────────────────────────────────── */
-.project-tags {
+/* ─── 快速开始 ────────────────────────────────────────────────────── */
+.quick-start {
+    background: var(--primary-light);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    text-align: center;
+}
+
+.start-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.start-card p {
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.start-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: var(--shadow-hover);
+    transition: var(--transition);
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(74, 144, 226, 0.3);
+}
+
+.btn-icon {
+    font-size: 24px;
+}
+
+/* ─── 使用说明 ────────────────────────────────────────────────────── */
+.usage {
+    padding: 20px 0;
+}
+
+.steps {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.tag {
-    background: rgba(74, 144, 226, 0.1);
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
-.project-card.placeholder .tag {
-    background: rgba(127, 140, 141, 0.1);
+.step:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateX(8px);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    font-size: 15px;
     color: var(--text-secondary);
+}
+
+/* ─── 项目链接 ────────────────────────────────────────────────────── */
+.project-links {
+    padding: 20px 0;
+}
+
+.links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.link-card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.link-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.link-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.link-card span {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* ─── 页脚 ────────────────────────────────────────────────────────── */
@@ -165,6 +284,25 @@ body {
 .footer p {
     font-size: 14px;
     color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 /* ─── 响应式设计 ───────────────────────────────────────────────────── */
@@ -173,34 +311,67 @@ body {
         padding: 24px 16px;
     }
 
+    .header {
+        padding: 30px 20px;
+    }
+
     .header h1 {
         font-size: 36px;
     }
 
-    .subtitle {
+    .header .subtitle {
         font-size: 16px;
     }
 
-    .projects-grid {
+    .main-content h2 {
+        font-size: 26px;
+    }
+
+    .feature-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    .project-card {
+    .feature-card {
         padding: 24px;
     }
 
-    .project-icon {
-        width: 64px;
-        height: 64px;
+    .quick-start {
+        padding: 30px 20px;
     }
 
-    .project-title {
+    .start-card p {
+        font-size: 16px;
+    }
+
+    .start-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
         font-size: 20px;
     }
 
-    .project-desc {
-        font-size: 14px;
+    .step-content h4 {
+        font-size: 18px;
+    }
+
+    .links-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-card {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 }
 
@@ -209,30 +380,33 @@ body {
         font-size: 28px;
     }
 
-    .subtitle {
+    .header .subtitle {
         font-size: 14px;
     }
 
-    .project-card {
-        padding: 20px;
+    .main-content h2 {
+        font-size: 22px;
     }
 
-    .project-icon {
-        width: 56px;
-        height: 56px;
+    .feature-icon {
+        font-size: 36px;
     }
 
-    .project-icon svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .project-title {
+    .feature-card h3 {
         font-size: 18px;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-number {
+        margin: 0 auto;
     }
 }
 
-/* ─── 加载动画（可选） ─────────────────────────────────────────────── */
+/* ─── 加载动画 ─────────────────────────────────────────────────────── */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -244,11 +418,17 @@ body {
     }
 }
 
-.project-card {
+.feature-card,
+.step,
+.link-card {
     animation: fadeInUp 0.5s ease-out backwards;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+.step:nth-child(1) { animation-delay: 0.1s; }
+.step:nth-child(2) { animation-delay: 0.2s; }
+.step:nth-child(3) { animation-delay: 0.3s; }

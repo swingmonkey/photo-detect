@@ -3,91 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claw 项目导航</title>
+    <title>Photo Detect - 照片信息提取工具</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Claw</h1>
-            <p class="subtitle">项目导航</p>
+            <h1>Photo Detect</h1>
+            <p class="subtitle">智能照片信息提取与分析工具</p>
         </header>
 
-        <main class="projects-grid">
-            <!-- Photo Detect 项目卡片 -->
-            <a href="photo-detect/index.html" class="project-card">
-                <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
-                        <circle cx="12" cy="13" r="3"/>
-                    </svg>
+        <main class="main-content">
+            <!-- 功能介绍 -->
+            <section class="features">
+                <h2>功能特性</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📷</div>
+                        <h3>EXIF 信息提取</h3>
+                        <p>提取照片的拍摄时间、地点、设备等完整 EXIF 元数据</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>地理位置定位</h3>
+                        <p>在地图上显示照片拍摄位置，支持批量查看</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>数据分析</h3>
+                        <p>统计照片设备分布、拍摄时间分布等数据</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>隐私保护</h3>
+                        <p>本地处理，照片数据不会上传到服务器</p>
+                    </div>
                 </div>
-                <h3 class="project-title">Photo Detect</h3>
-                <p class="project-desc">提取照片 EXIF 信息，查看拍摄时间、地点、设备等信息</p>
-                <div class="project-tags">
-                    <span class="tag">照片</span>
-                    <span class="tag">EXIF</span>
-                    <span class="tag">位置</span>
-                </div>
-            </a>
+            </section>
 
-            <!-- Stock News 项目卡片 -->
-            <a href="news.html" class="project-card">
-                <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 3v18h18"/>
-                        <path d="M18 17V9"/>
-                        <path d="M13 17V5"/>
-                        <path d="M8 17v-3"/>
-                    </svg>
+            <!-- 快速开始 -->
+            <section class="quick-start">
+                <h2>快速开始</h2>
+                <div class="start-card">
+                    <p>点击下方按钮进入 Photo Detect 工具，开始分析您的照片：</p>
+                    <a href="../index.html" class="start-btn">
+                        <span class="btn-icon">🚀</span>
+                        启动 Photo Detect
+                    </a>
                 </div>
-                <h3 class="project-title">Stock News</h3>
-                <p class="project-desc">股票新闻聚合，实时追踪市场动态和财经资讯</p>
-                <div class="project-tags">
-                    <span class="tag">股票</span>
-                    <span class="tag">新闻</span>
-                    <span class="tag">财经</span>
-                </div>
-            </a>
+            </section>
 
-            <!-- Programming Language Rankings 项目卡片 -->
-            <a href="#" class="project-card" onclick="alert('视频需要使用 Remotion 预览器打开：\nnpx remotion preview'); return false;">
-                <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                        <polyline points="14,2 14,8 20,8"/>
-                        <path d="M8 13h8"/>
-                        <path d="M8 17h8"/>
-                        <path d="M8 9h2"/>
-                    </svg>
+            <!-- 使用说明 -->
+            <section class="usage">
+                <h2>使用说明</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>选择照片</h4>
+                            <p>上传需要分析的照片文件（支持 JPG、PNG 等格式）</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>自动分析</h4>
+                            <p>系统自动提取照片的 EXIF 元数据信息</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>查看结果</h4>
+                            <p>查看详细的照片信息，包括拍摄参数和地理位置</p>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="project-title">Programming Language Rankings</h3>
-                <p class="project-desc">2015-2025 年编程语言流行度变化视频（Remotion）</p>
-                <div class="project-tags">
-                    <span class="tag">视频</span>
-                    <span class="tag">数据可视化</span>
-                    <span class="tag">Remotion</span>
-                </div>
-            </a>
+            </section>
 
-            <!-- 待添加项目占位卡片 -->
-            <div class="project-card placeholder">
-                <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
+            <!-- 项目链接 -->
+            <section class="project-links">
+                <h2>项目链接</h2>
+                <div class="links-grid">
+                    <a href="https://github.com/swingmonkey/photo-detect" target="_blank" class="link-card">
+                        <div class="link-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <span>GitHub 仓库</span>
+                    </a>
+                    <a href="../index.html" class="link-card">
+                        <div class="link-icon">🛠️</div>
+                        <span>使用工具</span>
+                    </a>
                 </div>
-                <h3 class="project-title">更多项目</h3>
-                <p class="project-desc">待添加新项目...</p>
-                <div class="project-tags">
-                    <span class="tag">敬请期待</span>
-                </div>
-            </div>
+            </section>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2026 Claw. All rights reserved.</p>
+            <p>&copy; 2026 Photo Detect. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="https://github.com/swingmonkey/photo-detect">GitHub</a> |
+                <a href="../index.html">工具首页</a>
+            </p>
         </footer>
     </div>
 </body>
