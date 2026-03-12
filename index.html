@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目导航 - Project Portal</title>
-    <link rel="stylesheet" href="portal/index.css">
+    <title>项目导航 - Photo Detect</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -13,37 +13,60 @@
             <p class="subtitle">选择一个项目开始使用</p>
         </header>
 
-        <main class="main-content">
-            <!-- 项目卡片 -->
-            <section class="features">
-                <div class="feature-grid" style="max-width: 600px; margin: 0 auto;">
-                    <a href="photo-detect/index.html" class="feature-card" style="text-decoration: none; color: inherit;">
-                        <div class="feature-icon">📸</div>
-                        <h3>Photo Detect</h3>
-                        <p>照片信息提取工具 - 提取EXIF元数据、地理位置、拍摄时间等信息</p>
-                        <div style="margin-top: 20px;">
-                            <span class="start-btn" style="display: inline-block; padding: 12px 24px; font-size: 16px;">
-                                进入工具 →
-                            </span>
-                        </div>
-                    </a>
+        <main class="projects-grid">
+            <!-- Photo Detect 项目卡片 -->
+            <a href="photo-detect/index.html" class="project-card">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                        <circle cx="12" cy="13" r="3"/>
+                    </svg>
                 </div>
-            </section>
+                <h3 class="project-title">Photo Detect</h3>
+                <p class="project-desc">提取照片 EXIF 信息，查看拍摄时间、地点、设备等信息</p>
+                <div class="project-tags">
+                    <span class="tag">照片</span>
+                    <span class="tag">EXIF</span>
+                    <span class="tag">位置</span>
+                </div>
+            </a>
 
-            <!-- 关于 -->
-            <section class="quick-start" style="margin-top: 40px;">
-                <h2 style="color: var(--text); margin-bottom: 20px;">关于</h2>
-                <p style="color: var(--text-secondary);">
-                    这是一个基于 Web 的照片元数据提取工具，所有处理都在本地完成，保护您的隐私。
-                </p>
-                <div class="footer-links" style="margin-top: 20px;">
-                    <a href="https://github.com/swingmonkey/photo-detect" target="_blank">GitHub 仓库</a>
+            <!-- Woodfish 项目卡片 -->
+            <a href="woodfish/index.html" class="project-card">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
                 </div>
-            </section>
+                <h3 class="project-title">电子木鱼</h3>
+                <p class="project-desc">2D 网页小游戏，点击木鱼积攒功德</p>
+                <div class="project-tags">
+                    <span class="tag">游戏</span>
+                    <span class="tag">木鱼</span>
+                    <span class="tag">互动</span>
+                </div>
+            </a>
+
+            <!-- 待添加项目占位卡片 -->
+            <div class="project-card placeholder">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+                <h3 class="project-title">更多项目</h3>
+                <p class="project-desc">待添加新项目...</p>
+                <div class="project-tags">
+                    <span class="tag">敬请期待</span>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
             <p>&copy; 2026 Photo Detect. All rights reserved.</p>
+            <p class="footer-note">CodeBuddy 工作空间</p>
         </footer>
     </div>
 </body>

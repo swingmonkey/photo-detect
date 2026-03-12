@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子木鱼 - 积功德</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>电子木鱼</h1>
+            <p class="subtitle">点击木鱼，积攒功德</p>
+        </header>
+
+        <!-- 功德计数器 -->
+        <div class="merit-counter">
+            <div class="merit-label">已积功德</div>
+            <div class="merit-count" id="meritCount">0</div>
+            <div class="merit-unit">次</div>
+        </div>
+
+        <!-- 木鱼点击区域 -->
+        <div class="woodfish-container">
+            <div class="woodfish" id="woodfish">
+                <svg viewBox="0 0 200 180" class="woodfish-svg">
+                    <!-- 木鱼主体 -->
+                    <ellipse cx="100" cy="100" rx="80" ry="60" fill="#D2691E" stroke="#8B4513" stroke-width="3"/>
+                    <ellipse cx="100" cy="95" rx="70" ry="50" fill="#CD853F"/>
+                    
+                    <!-- 木鱼嘴 -->
+                    <ellipse cx="100" cy="130" rx="25" ry="15" fill="#8B4513"/>
+                    <ellipse cx="100" cy="128" rx="20" ry="12" fill="#2F2F2F"/>
+                    
+                    <!-- 木鱼眼睛 -->
+                    <circle cx="70" cy="85" r="8" fill="#2F2F2F"/>
+                    <circle cx="130" cy="85" r="8" fill="#2F2F2F"/>
+                    
+                    <!-- 木鱼纹理 -->
+                    <path d="M 50 110 Q 100 100 150 110" stroke="#8B4513" stroke-width="2" fill="none"/>
+                    <path d="M 55 120 Q 100 112 145 120" stroke="#8B4513" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+            
+            <!-- 点击效果文字 -->
+            <div class="click-effect" id="clickEffect">功德+1</div>
+        </div>
+
+        <!-- 木槌 -->
+        <div class="mallet" id="mallet">
+            <svg viewBox="0 0 100 150" class="mallet-svg">
+                <rect x="45" y="60" width="10" height="90" fill="#8B4513"/>
+                <ellipse cx="50" cy="40" rx="30" ry="25" fill="#D2691E"/>
+                <ellipse cx="50" cy="38" rx="25" ry="20" fill="#CD853F"/>
+            </svg>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div class="controls">
+            <button class="control-btn" id="resetBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/>
+                    <path d="M3 3v9h9"/>
+                </svg>
+                重置计数
+            </button>
+            <button class="control-btn" id="soundBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                </svg>
+                音效
+            </button>
+            <button class="control-btn" id="autoBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                自动敲击
+            </button>
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">最高连击</div>
+                <div class="stat-value" id="maxCombo">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">今日功德</div>
+                <div class="stat-value" id="todayMerit">0</div>
+            </div>
+        </div>
+
+        <!-- 提示信息 -->
+        <div class="tips">
+            <p>💡 点击木鱼或按空格键积功德</p>
+            <p>🔔 开启音效获得更好体验</p>
+        </div>
+
+        <footer class="footer">
+            <p><a href="../index.html">← 返回项目列表</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
