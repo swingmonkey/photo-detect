@@ -1,0 +1,13 @@
+{
+  "name": "photo-detect",
+  "version": "1.0.0",
+  "description": "Web application to detect and extract photo information (EXIF data, location, time, etc.)",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": ["photo", "exif", "metadata", "geolocation", "image"],
+  "author": "",
+  "license": "MIT"
+}
