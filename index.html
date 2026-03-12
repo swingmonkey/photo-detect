@@ -3,178 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Detect - 照片信息检测</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>项目导航 - Project Portal</title>
+    <link rel="stylesheet" href="portal/index.css">
 </head>
 <body>
     <div class="container">
-        <!-- 头部 -->
         <header class="header">
-            <div class="header-content">
-                <h1 class="logo">📸 Photo Detect</h1>
-                <p class="subtitle">上传图片,提取EXIF信息、位置、拍摄时间等元数据</p>
-            </div>
+            <h1>项目导航</h1>
+            <p class="subtitle">选择一个项目开始使用</p>
         </header>
 
-        <!-- 主要内容区 -->
         <main class="main-content">
-            <!-- 上传区域 -->
-            <section class="upload-section">
-                <div class="upload-container">
-                    <div class="upload-area" id="uploadArea">
-                        <div class="upload-icon">📷</div>
-                        <h3 class="upload-title">拖放图片到此处</h3>
-                        <p class="upload-subtitle">或者</p>
-                        <button class="upload-button" id="selectFileBtn">选择图片</button>
-                        <input type="file" id="fileInput" accept="image/*" hidden>
-                        <p class="upload-hint">支持 JPG、JPEG、PNG、TIFF 等格式</p>
-                    </div>
+            <!-- 项目卡片 -->
+            <section class="features">
+                <div class="feature-grid" style="max-width: 600px; margin: 0 auto;">
+                    <a href="photo-detect/index.html" class="feature-card" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">📸</div>
+                        <h3>Photo Detect</h3>
+                        <p>照片信息提取工具 - 提取EXIF元数据、地理位置、拍摄时间等信息</p>
+                        <div style="margin-top: 20px;">
+                            <span class="start-btn" style="display: inline-block; padding: 12px 24px; font-size: 16px;">
+                                进入工具 →
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </section>
 
-            <!-- 图片预览区 -->
-            <section class="preview-section hidden" id="previewSection">
-                <div class="preview-container">
-                    <h3 class="section-title">图片预览</h3>
-                    <div class="image-wrapper">
-                        <img id="previewImage" alt="上传的图片">
-                    </div>
-                    <button class="reset-button" id="resetBtn">🔄 重新上传</button>
-                </div>
-            </section>
-
-            <!-- 结果展示区 -->
-            <section class="results-section hidden" id="resultsSection">
-                <h3 class="section-title">检测结果</h3>
-
-                <!-- 基础信息卡片 -->
-                <div class="info-card">
-                    <div class="card-header">
-                        <span class="card-icon">📋</span>
-                        <h4 class="card-title">基础信息</h4>
-                    </div>
-                    <div class="card-content">
-                        <div class="info-item">
-                            <span class="info-label">文件名</span>
-                            <span class="info-value" id="fileName">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">文件大小</span>
-                            <span class="info-value" id="fileSize">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">文件类型</span>
-                            <span class="info-value" id="fileType">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">图片尺寸</span>
-                            <span class="info-value" id="imageDimensions">-</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 拍摄信息卡片 -->
-                <div class="info-card">
-                    <div class="card-header">
-                        <span class="card-icon">📸</span>
-                        <h4 class="card-title">拍摄信息</h4>
-                    </div>
-                    <div class="card-content">
-                        <div class="info-item">
-                            <span class="info-label">拍摄时间</span>
-                            <span class="info-value" id="captureDate">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">设备品牌</span>
-                            <span class="info-value" id="cameraMake">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">设备型号</span>
-                            <span class="info-value" id="cameraModel">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">软件版本</span>
-                            <span class="info-value" id="software">-</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 拍摄参数卡片 -->
-                <div class="info-card">
-                    <div class="card-header">
-                        <span class="card-icon">⚙️</span>
-                        <h4 class="card-title">拍摄参数</h4>
-                    </div>
-                    <div class="card-content">
-                        <div class="info-item">
-                            <span class="info-label">光圈</span>
-                            <span class="info-value" id="aperture">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">快门速度</span>
-                            <span class="info-value" id="shutterSpeed">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">ISO</span>
-                            <span class="info-value" id="iso">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">焦距</span>
-                            <span class="info-value" id="focalLength">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">闪光灯</span>
-                            <span class="info-value" id="flash">-</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 地理位置卡片 -->
-                <div class="info-card">
-                    <div class="card-header">
-                        <svg class="card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        <h4 class="card-title">地理位置</h4>
-                    </div>
-                    <div class="card-content">
-                        <div class="info-item">
-                            <span class="info-label">纬度</span>
-                            <span class="info-value" id="latitude">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">经度</span>
-                            <span class="info-value" id="longitude">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">拍摄地点</span>
-                            <span class="info-value" id="location">-</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Google Maps</span>
-                            <a class="info-value-link" id="mapsLink" href="#" target="_blank">查看地图 ↗</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 无EXIF数据提示 -->
-                <div class="no-data hidden" id="noData">
-                    <div class="no-data-icon">⚠️</div>
-                    <p>此图片未包含EXIF信息或已被清除</p>
+            <!-- 关于 -->
+            <section class="quick-start" style="margin-top: 40px;">
+                <h2 style="color: var(--text); margin-bottom: 20px;">关于</h2>
+                <p style="color: var(--text-secondary);">
+                    这是一个基于 Web 的照片元数据提取工具，所有处理都在本地完成，保护您的隐私。
+                </p>
+                <div class="footer-links" style="margin-top: 20px;">
+                    <a href="https://github.com/swingmonkey/photo-detect" target="_blank">GitHub 仓库</a>
                 </div>
             </section>
         </main>
 
-        <!-- 页脚 -->
         <footer class="footer">
-            <p>Photo Detect - 安全、快速的图片元数据提取工具</p>
-            <p class="footer-note">⚠️ 所有处理都在本地浏览器完成,图片不会上传到任何服务器</p>
+            <p>&copy; 2026 Photo Detect. All rights reserved.</p>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
