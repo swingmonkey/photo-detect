@@ -256,17 +256,27 @@ async function reverseGeocode(lat, lon) {
     }
 }
 
+// 加载提示
+function showLoading(text) {
+    loadingText.textContent = text;
+    loadingOverlay.classList.remove('hidden');
+}
+
+function hideLoading() {
+    loadingOverlay.classList.add('hidden');
+}
+
 function resetUI() {
     fileInput.value = '';
     previewSection.classList.add('hidden');
     resultsSection.classList.add('hidden');
     uploadArea.parentElement.classList.remove('hidden');
 
-    const fields = ['fileName', 'fileSize', 'fileType', 'imageDimensions', 
+    const fields = ['fileName', 'fileSize', 'fileType', 'imageDimensions',
                    'captureDate', 'cameraMake', 'cameraModel', 'software',
                    'aperture', 'shutterSpeed', 'iso', 'focalLength', 'flash',
                    'latitude', 'longitude', 'location'];
-    
+
     fields.forEach(field => {
         document.getElementById(field).textContent = '-';
     });
